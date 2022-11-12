@@ -1,0 +1,90 @@
+---------local repository-----------------
+
+$ mkdir GIT	//create project folder
+clear		// to clear the consol
+$ cd GIT	// to go to the GIT(created folder name)
+$ touch index.html	//touch filename.extention > to create files
+$ ls		// see the content
+
+// enough to connect once for a lifeTime
+$ git config --global user.name 'bhathi97'
+$ git config --global user.email 'bhathiya.rb@gmail.com'
+
+// staging area -  to be commited file area
+// commit - save did changes of files as cannot undo in the repository
+
+
+$ git add file.name //add to the staging area
+$ git add . //all files add to hte staging are/repo
+$ git add *.html //add only have .extention files to the repository 
+
+
+$ git rm --cached file.name //remove from the staging area/git repository
+
+$ git status //to see the stute(in the stage or not)
+
+$ git touch file.name //create file
+$ rm file.name //delete files 
+
+if modified file after added to the staging area
+	$ git add updated.file or add . (//all files)
+
+//commit make new version
+$ git commit -m 'commitMsg'
+
+if there are some files dont want to the repository
+	$ touch .gitignore //make .gitignore file
+	//open the .gitignore file and there type what files dont want to add
+		file.name
+	//now add .gitignore file to the staging area
+		$ git add .	
+
+//how to make branches
+	$ git branch branch_name / branchName //create
+	$ git checkout branch_name //goto the branch
+	//do things ex: $ touch file.name
+	//mustCommit $ git commit -m 'commitMsg'
+	
+//how to back to the master branch
+$ git checkout master	
+
+//how to merge branches
+$ git mearge branch_name
+
+//to see commit log
+$ git log
+$ git log --graph 
+
+----------------remote repository-------------------
+
+Now we have to add local repository to the remote repository
+git remote add origin https://github.com/bhathi97/myGitLearn_bhathi.git //this get from the gitHub
+git branch -M main
+git push -u origin main
+
+if want to change the current remote repository
+	$ git remote set-url origin repoUrl 
+
+
+
+//clone from remote repository
+get some file
+open gitBash in that ctreated folder
+copy clone url from the gitHub
+$ git clone https://github.com/bhathi97/myGitLearn_bhathi.git //git clone copiedURL
+cd folderName
+now must see (master)
+
+if remote repository update we have to get to the local repository
+$ git pull
+
+
+-----------------------
+|	extra: add new file 
+|	$ touch file.name
+|	$ git add .
+|	$ git commit -m 'msg'
+|	if update >
+|		do : git add . and git commit -m ''
+|	git push
+-----------------------
