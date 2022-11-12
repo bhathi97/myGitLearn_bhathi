@@ -13,11 +13,9 @@ $ git config --global user.email 'bhathiya.rb@gmail.com'
 // staging area -  to be commited file area
 // commit - save did changes of files as cannot undo in the repository
 
-
 $ git add file.name //add to the staging area
 $ git add . //all files add to hte staging are/repo
 $ git add *.html //add only have .extention files to the repository 
-
 
 $ git rm --cached file.name //remove from the staging area/git repository
 
@@ -57,6 +55,7 @@ $ git log --graph
 
 ----------------remote repository-------------------
 
+//add to rempote repository
 Now we have to add local repository to the remote repository
 git remote add origin https://github.com/bhathi97/myGitLearn_bhathi.git //this get from the gitHub
 git branch -M main
@@ -64,8 +63,6 @@ git push -u origin main
 
 if want to change the current remote repository
 	$ git remote set-url origin repoUrl 
-
-
 
 //clone from remote repository
 get some file
